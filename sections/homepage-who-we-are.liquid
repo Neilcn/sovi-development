@@ -1,0 +1,67 @@
+<div class="who-we-are page-width">
+  <div class="who-title">
+<h5>who we are</h5>
+  </div>
+<div class="text-container"><div class="who-text"><h3>Sovi Creative is a leading Shopify Plus Partner, helping merchants drive
+E-commerce growth since 2013. We specialize in design, development
+and growth marketing. Our approach is full-service. Our focus is delivering measurable results.</h3>
+
+  </div>
+      <div class="rich-text__buttons" style="padding-top:20px;"><a href="/pages/contact" class="button button--primary">LEARN MORE</a></div>
+</div>
+    
+
+    
+</div>
+
+{% schema %}
+  {
+    "name": "Who We Are",
+    "settings": [],
+    "presets": [
+{
+"name": "Homepage Who We Are",
+"category": "ADVANCED LAYOUT"
+}
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+  .who-we-are{
+      display: flex;
+      flex-direction: row;
+    padding-bottom: 180px!important;
+  }
+  .who-title{
+flex-basis: 290px;
+    text-align: center;
+    flex-grow: 4;
+    flex-shrink: 4;
+  }
+  .who-title h5 {
+  font-size: 19px;
+    font-family: NeueMontrealMedium;
+    line-height: 150%;
+    text-transform: uppercase;
+    letter-spacing: 1px;      
+  }
+  .who-text h3{
+      font-size: 32px;
+    font-family: NeueMontrealMedium;
+    line-height: 140%;
+  }
+  .text-container{
+display: flex;
+    flex-direction: column;
+    padding-left: 90px;
+    flex-grow: 6;
+    flex-shrink: 6;
+  }
+ .who-we-are .text-container .rich-text__buttons{
+   justify-content: start!important;
+  }
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

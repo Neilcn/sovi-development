@@ -1,0 +1,209 @@
+ <div class="carousel">
+  <div class="slide slider--1">
+    <div class="slide__card">
+      <div class="card__logo"><img src="https://cdn.shopify.com/s/files/1/0560/2961/0041/files/image_1.png?v=1659718664" alt=""></div>
+      <div class="card__photo"><img src="https://cdn.shopify.com/s/files/1/0560/2961/0041/files/Rectangle_91.png?v=1659718664" alt=""></div>
+    </div>
+  </div>
+
+    <div class="slide slider--2">
+    <div class="slide__card">
+      <div class="card__logo"><img src="https://cdn.shopify.com/s/files/1/0560/2961/0041/files/image_2.png?v=1659718664" alt=""></div>
+      <div class="card__photo"><img src="https://cdn.shopify.com/s/files/1/0560/2961/0041/files/Rectangle_92.png?v=1659718664" alt=""></div>
+    </div>
+  </div>
+
+    <div class="slide slider--3">
+    <div class="slide__card">
+      <div class="card__logo"><img src="https://cdn.shopify.com/s/files/1/0560/2961/0041/files/image_3.png?v=1659718664" alt=""></div>
+      <div class="card__photo"><img src="https://cdn.shopify.com/s/files/1/0560/2961/0041/files/Rectangle_93.png?v=1659718664" alt=""></div>
+    </div>
+  </div>
+
+    <div class="slide slider--4">
+    <div class="slide__card">
+      <div class="card__logo"><img style="height: 29px;" src="https://cdn.shopify.com/s/files/1/0560/2961/0041/files/Vector.png?v=1659718774" alt=""></div>
+      <div class="card__photo"><img src="https://cdn.shopify.com/s/files/1/0560/2961/0041/files/Rectangle_96_86975b97-4821-411f-8a3d-f780e752c47d.png?v=1659731830" alt=""></div>
+    </div>
+  </div>
+
+    <div class="slide slider--5">
+    <div class="slide__card">
+      <div class="card__logo"><img src="https://cdn.shopify.com/s/files/1/0560/2961/0041/files/Nestle_Health_Science_Logo_566x165_1.png?v=1659718664" alt=""></div>
+      <div class="card__photo"><img src="https://cdn.shopify.com/s/files/1/0560/2961/0041/files/Rectangle_94.png?v=1659718664" alt=""></div>
+    </div>
+  </div>
+
+    <div class="slide slider--6">
+    <div class="slide__card">
+      <div class="card__logo"><img src="https://cdn.shopify.com/s/files/1/0560/2961/0041/files/image_4.png?v=1659718664" alt=""></div>
+      <div class="card__photo"><img src="https://cdn.shopify.com/s/files/1/0560/2961/0041/files/Rectangle_95.png?v=1659718701" alt=""></div>
+    </div>
+  </div>
+
+    <div class="slide slider--7">
+    <div class="slide__card">
+      <div class="card__logo"><img src="https://cdn.shopify.com/s/files/1/0560/2961/0041/files/logo_300x300_1.png?v=1659718664" alt=""></div>
+      <div class="card__photo"><img src="https://cdn.shopify.com/s/files/1/0560/2961/0041/files/Rectangle_97.png?v=1659718743" alt=""></div>
+    </div>
+  </div>
+</div>
+
+<script>
+//Homepage Carousel - Neil Ji Oct 9, 2022
+
+  const slides = document.querySelectorAll('.slide');
+
+let currentSlide = 0;
+  let activeSlide = 3;
+
+  // slides.forEach((s,i)=>{if (i=== currentSlide ){s.style.transform = 'scale(1.2)';}});
+  //       if (i === currentSlide - 1) {
+  //   s.style.transition = 'transform 0s';
+  // } else {s.style.transition = 'transform 0.5s';}
+
+ const nextSlide = function () {
+
+  slides.forEach((s, i) => {
+     s.classList.remove('slide-active');
+     if (i=== activeSlide){s.classList.add('slide-active');}
+    
+    if (currentSlide>=0 && currentSlide<=3) {
+      if (i < currentSlide) {
+      s.style.transform = `translate(${
+        -300 + (100 * i)  - 100 * currentSlide + 10 + 100 * slides.length
+      }%,10%)`;
+    } 
+    
+    else {
+      if (i<activeSlide){
+        s.style.transform = `translate(${-300 + (100 * i)- 100 * currentSlide - 10}%,10%)`;
+      } else
+      {s.style.transform = `translate(${-300 + (100 * i)- 100 * currentSlide + 10}%,10%)`;}
+    }
+    }
+
+    if (currentSlide===4){
+      if(i<4){
+              s.style.transform = `translate(${
+        -300 + (100 * i)  - 100 * currentSlide + 10 + 100 * slides.length
+      }%,10%)`;
+      } else {
+        s.style.transform = `translate(${-300 + (100 * i)- 100 * currentSlide - 10}%,10%)`;
+      }
+    }
+
+    if (currentSlide===5){
+      if(i>=1 && i<=4){
+        s.style.transform = `translate(${
+        -300 + (100 * i)  - 100 * currentSlide + 10 + 100 * slides.length
+      }%,10%)`;
+      } else {
+        if (i===0){
+          s.style.transform = `translate(${
+        -300 + (100 * i)  - 100 * currentSlide - 10 + 100 * slides.length
+      }%,10%)`;
+        } else
+        {s.style.transform = `translate(${-300 + (100 * i)- 100 * currentSlide - 10}%,10%)`;}
+      }
+    }
+
+    if (currentSlide===6){
+            if(i>=2 && i<=5){
+                      s.style.transform = `translate(${
+        -300 + (100 * i)  - 100 * currentSlide + 10 + 100 * slides.length
+      }%,10%)`;
+            } else {
+              if(i===6){
+                s.style.transform = `translate(${-300 + (100 * i)- 100 * currentSlide - 10}%,10%)`;}
+                else {
+                          s.style.transform = `translate(${
+        -300 + (100 * i)  - 100 * currentSlide - 10 + 100 * slides.length
+      }%,10%)`;
+                }
+              }
+            }
+    
+    
+
+      // no grow
+    // else {
+    //   s.style.transform = `translateX(${-300 + (100 * i)- 100 * currentSlide}%)`;
+    // }
+  });
+   
+
+  currentSlide++;
+   activeSlide++;
+
+  if (currentSlide === 7) currentSlide = 0;
+   if (activeSlide === 7) activeSlide = 0;
+      console.log(currentSlide,activeSlide);
+
+}; 
+// nextSlide();
+// nextSlide();
+//  nextSlide();
+// nextSlide();
+//    nextSlide();
+//  nextSlide();
+// nextSlide();
+//  nextSlide();
+// nextSlide();
+//   nextSlide();
+const nextSlideInterval = setInterval( nextSlide,2000);
+
+  
+</script>
+
+{% schema %}
+  {
+    "name": "Homepage Carousel",
+    "settings": [],
+    "presets": [
+{
+"name": "Homepage Carousel",
+"category": "ADVANCED LAYOUT"
+}
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+  .carousel {
+  max-width: 1400px;
+  height: 50rem;
+  margin: 0 auto;
+  position: relative;
+  transform: translateX(43%);
+  }
+  .slide {
+      display: flex;
+  align-items: center;
+  justify-content: center;
+      position: absolute;
+  top: 0;
+/*     transition: transform .5s;  */
+  }
+  .slide-active{
+    transform : scale(1.2)!important;
+  }
+  .slide__card{
+    text-align: center;
+    width:224px;
+    padding:9px 0px;
+  }
+  .card__logo {height: 55px;
+    width: fit-content;
+    padding: 15px;
+margin: auto;
+              }
+  .card__photo {
+    height: 276px;
+    width: 206px;
+    margin: auto;
+  }
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

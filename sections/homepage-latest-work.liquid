@@ -1,0 +1,123 @@
+<div class="latest-work page-width">
+  <div class="latest-work-title">
+<h5>what we've been up to</h5>
+  </div>
+<div class="latest-work-heading">
+  <div class="heading"><h2>latest work</h3></div>
+  <div class="rich-text__buttons" style="padding-top:20px;"><a href="/pages/contact" class="button button--primary">VIEW ALL WORK</a></div>
+</div>
+    
+<div class="work-card-container">
+    <div class="work-card  work-card-3">
+    <div class="work-card-bg">
+     <div class="work-card-image"><img src="https://cdn.shopify.com/s/files/1/0560/2961/0041/files/Rectangle_104.png?v=1659651520"></div>
+    </div>
+  <div class="work-title"><h3>Vital Proteins Canada ↗</h3></div>
+  <div class="work-intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et </div>
+      </div>
+    <div class="work-card  work-card-4">
+    <div class="work-card-bg">
+     <div class="work-card-image"><img src="https://cdn.shopify.com/s/files/1/0560/2961/0041/files/Rectangle_103.png?v=1659651520"></div>
+    </div>
+  <div class="work-title"><h3>Tims x Justin Bieber ↗</h3></div>
+  <div class="work-intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et </div>
+      </div>
+  <div class="work-card work-card-1">
+    <div class="work-card-bg"> 
+      <div class="work-card-image"><img src="{{ section.settings.image | image_url:width:580 }}" /></div>
+    </div>
+   
+  <div class="work-title"><h3>{{ section.settings.heading }}</h3></div>
+  <div class="work-intro">{{ section.settings.description }}</div>
+    </div>
+
+  <div class="work-card  work-card-2">
+    <div class="work-card-bg">
+     <div class="work-card-image"><img src="https://cdn.shopify.com/s/files/1/0560/2961/0041/files/Rectangle_102.png?v=1659651520"></div>
+    </div>
+  <div class="work-title"><h3>The Treadmill Factory ↗</h3></div>
+  <div class="work-intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et </div>
+      </div>
+
+    
+</div>
+
+{% schema %}
+  {
+    "name": "Latest Work",
+    "settings": [
+          {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Card 1 Image"
+    },
+      {"type":"text",
+      "label":"Card 1 Heading",
+        "id":"heading"
+      },
+            {"type":"text",
+      "label":"Card 1 Description",
+        "id":"description"
+      }
+    ],
+      "presets": [
+    {
+      "name": "homepage latest work"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+  .latest-work-title h5 {
+  font-size: 19px;
+    font-family: NeueMontrealMedium;
+    line-height: 150%;
+    text-transform: uppercase;
+    letter-spacing: 1px;      
+  }
+  .latest-work-heading{
+    display: flex;
+  }
+ .latest-work-heading .rich-text__buttons {margin-left: auto;}
+  .work-card {
+
+  }
+  .work-card-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 50px;
+    gap: 20px;
+  }
+  .work-card-bg {
+        display: flex;
+    justify-content: center;
+    align-items: center;
+            width:640px;
+    height:420px;
+}
+  .work-card-1 .work-card-bg {
+    background:  url("https://cdn.shopify.com/s/files/1/0560/2961/0041/files/Rectangle_56.png?v=1659651520") no-repeat center;}
+   .work-card-2 .work-card-bg {
+     background:  url("https://cdn.shopify.com/s/files/1/0560/2961/0041/files/Rectangle_57.png?v=1659651520") no-repeat center;}
+     .work-card-3 .work-card-bg {
+     background:  url("https://cdn.shopify.com/s/files/1/0560/2961/0041/files/Rectangle_54.png?v=1659651577") no-repeat center;}
+     .work-card-4 .work-card-bg {
+     background:  url("https://cdn.shopify.com/s/files/1/0560/2961/0041/files/Rectangle_55.png?v=1659651520") no-repeat center;}
+  .work-title h3 {
+  font-size: 32px;
+    font-family: NeueMontrealMedium;
+    line-height: 140%; 
+    margin-top: 20px;
+    text-decoration: underline;
+  }
+  .work-intro{
+      font-size: 16px;
+    font-family: NeueMontrealMedium;
+    line-height: 140%;
+    margin-bottom: 50px;
+  }
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
