@@ -245,10 +245,6 @@
     const clicked = e.target.classList.contains('card-title');
     if (! clicked) 
       return;
-    
-
-
-
     console.log(clicked);
 
     [... cardParents.children].forEach(el => el.classList.remove('card-active'));
